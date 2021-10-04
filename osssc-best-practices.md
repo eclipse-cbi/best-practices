@@ -2,7 +2,11 @@
 
 With the [increasing number of software supply chain attacks](https://github.com/cncf/tag-security/tree/main/supply-chain-security/compromises), we've defined a (non-exhaustive) list of best practices that we encourage Eclipse Foundation committers and projects to follow. Note that we also listed some best practices that may require the Eclipse Foundation to step in in order to make them achievable or easier to implement.
 
-Building open source software is increasingly complex and distributed. It is a process comprised of many packages which are retrieved, digested and stored and where any flaw can be a vector of a supply chain attack. Proper threat modeling of each step is required in order to mitigate any such flaw. However, there is no one-size fits all in terms of threat modeling, so we just enumerate some common best practices defending against the most common attacks.
+Building open source software is increasingly complex and distributed. It is a process comprised of many packages which are retrieved, digested and stored and where any flaw can be a vector of a supply chain attack as depicted on the picture below from the [SLSA security framework](https://slsa.dev/levels#threats).
+
+![Supply Chain Threats](images/supply-chain-threats.svg?raw=true)
+
+Proper threat modeling of each step is required in order to mitigate any such flaw. However, there is no one-size fits all in terms of threat modeling, so we just enumerate some common best practices defending against the most common attacks.
 
 This work takes inspiration in various publications from entities like the [CNCF](https://github.com/cncf/tag-security) and the [Linux Foundation](https://www.linuxfoundation.org/resources/publications/open-source-software-supply-chain-security/).
 
@@ -152,3 +156,4 @@ There are several assement tools and evaluation framework out there that project
 
 * OSSF Security Scorecards: https://github.com/ossf/scorecard
 * Secure Supply Chain Assessment from the CNCF Security Technical Advisory Group: https://github.com/cncf/tag-security/blob/master/supply-chain-security/supply-chain-security-paper/secure-supply-chain-assessment.md
+* SLSA ("salsa") - Supply-chain Levels for Software Artifacts: https://slsa.dev
