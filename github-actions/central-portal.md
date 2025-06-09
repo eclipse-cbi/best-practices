@@ -95,6 +95,7 @@ Add the plugin to your `pom.xml`:
 
 Example of snapshot deployment:
 
+{% raw %}
 ```yaml
 name: Publish Snapshot package to the Maven Central Repository
 on:
@@ -125,9 +126,11 @@ jobs:
           MAVEN_PASSWORD: ${{ secrets.CENTRAL_SONATYPE_TOKEN_PASSWORD }}
           MAVEN_GPG_PASSPHRASE: ${{ secrets.GPG_PASSPHRASE }}
 ```
+{% endraw %}
 
 Publish release depends on project strategy, this is an example:
 
+{% raw %}
 ```yaml
 name: Publish Release to Maven Central
 
@@ -164,6 +167,7 @@ jobs:
           MAVEN_PASSWORD: ${{ secrets.CENTRAL_SONATYPE_TOKEN_PASSWORD }}
           MAVEN_GPG_PASSPHRASE: ${{ secrets.GPG_PASSPHRASE }}
 ```
+{% endraw %}
 
 ## Snapshot Publishing (Optional)
 
