@@ -76,7 +76,7 @@ Add the plugin to your `pom.xml`:
     <plugin>
       <groupId>org.apache.maven.plugins</groupId>
       <artifactId>maven-gpg-plugin</artifactId>
-      <version>1.5</version>
+      <version>3.2.7</version>
       <executions>
         <execution>
           <id>sign-artifacts</id>
