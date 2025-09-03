@@ -1,6 +1,6 @@
 # Upload build artifacts to download.eclipse.org
 
-Eclipse projects are provided with download space on our downloads service, which can be reached via https://download.eclipse.org/<project_shortname> e.g. https:download.eclipse.org/cbi.
+Eclipse projects are provided with download space on our downloads service, which can be reached via `https://download.eclipse.org/<project_shortname>` e.g. https://download.eclipse.org/cbi.
 
 This guide is intended to help with uploading build artifacts to a project's directory on download.eclipse.org using GitHub actions.
 
