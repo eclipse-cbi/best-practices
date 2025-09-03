@@ -1,6 +1,8 @@
 # Upload build artifacts to download.eclipse.org
 
-This guide is intended to help with uploading build artifacts to a project's directory on download.eclipse.org using GitHub actions
+Eclipse projects are provided with download space on our downloads service, which can be reached via https://download.eclipse.org/<project_shortname> e.g. https:download.eclipse.org/cbi.
+
+This guide is intended to help with uploading build artifacts to a project's directory on download.eclipse.org using GitHub actions.
 
 ## Prerequisites
 
@@ -80,7 +82,8 @@ Build artifacts are uploaded to https://download.eclipse.org/cbi/github-upload-t
 
 ## Best practices
 
-* Regularily clean up your download directory
+* Projects are expected to manage their disk consumption and should move older releases to archive.eclipse.org when they are no longer needed (this is possible via the web interface on download.eclipse.org if you are logged in)
+* Regularily clean up your download directory (e.g. remove outdated staging or snapshot releases)
 
 ## TODO
 
