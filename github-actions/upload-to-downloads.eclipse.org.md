@@ -82,6 +82,10 @@ Build artifacts are uploaded to https://download.eclipse.org/cbi/github-upload-t
 
 * Regularily clean up your download directory
 
+## TODO
+
+* add examples for manipulating (copy/move/delete) files via SSH commands
+
 ## Resources
 
 * https://github.com/appleboy/scp-action
