@@ -53,9 +53,10 @@ Add the plugin to your `pom.xml`:
     <plugin>
       <groupId>org.sonatype.central</groupId>
       <artifactId>central-publishing-maven-plugin</artifactId>
-      <version>0.7.0</version>
+      <version>0.9.0</version>
       <extensions>true</extensions>
       <configuration>
+        <deploymentName>Eclipse XXX ${project.version}</deploymentName>
         <publishingServerId>central</publishingServerId>
         <autoPublish>true</autoPublish>
         <waitUntil>published</waitUntil>
@@ -65,6 +66,8 @@ Add the plugin to your `pom.xml`:
   </plugins>
 </build>
 ```
+
+Specify a unique `deploymentName` to clearly distinguish multiple build publications and avoid any confusion in the central portal.
 
 ### GPG Signing in GitHub Actions
 
@@ -76,7 +79,7 @@ Add the plugin to your `pom.xml`:
     <plugin>
       <groupId>org.apache.maven.plugins</groupId>
       <artifactId>maven-gpg-plugin</artifactId>
-      <version>3.2.7</version>
+      <version>3.2.8</version>
       <executions>
         <execution>
           <id>sign-artifacts</id>
