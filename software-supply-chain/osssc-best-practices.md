@@ -4,7 +4,7 @@ With the [increasing number of software supply chain attacks](https://github.com
 
 Building open source software is increasingly complex and distributed. It is a process comprised of many packages which are retrieved, digested and stored and where any flaw can be a vector of a supply chain attack as depicted on the picture below from the [SLSA security framework](https://slsa.dev/levels#threats).
 
-![Supply Chain Threats](images/supply-chain-threats.svg?raw=true)
+![Supply Chain Threats](https://raw.githubusercontent.com/eclipse-cbi/best-practices/main/software-supply-chain/images/supply-chain-threats.svg)
 
 Proper threat modeling of each step is required in order to mitigate any such flaw. However, there is no one size fits all in terms of threat modeling, so we just enumerate some common best practices defending against the most common attacks.
 
@@ -102,13 +102,13 @@ On [Jenkins](https://wiki.eclipse.org/Jenkins), depending on which git hosting i
 
 The Gerrit Trigger Plugin has one advantage as it has a configuration that prevents a build from being triggered if the review contains changes to some files. Note that it does not discriminate committers and non-committers, preventing build to be triggered for both categories.
 
-![Add Forbiddent File Path](images/gerrit-jenkins-forbidden-files.png?raw=true)
+![Add Forbiddent File Path](https://raw.githubusercontent.com/eclipse-cbi/best-practices/refs/heads/main/software-supply-chain/images/gerrit-jenkins-forbidden-files.png)
 
 This shall be used to exclude all changes modifying a build pipeline related files (e.g., `Makefile`, `pom.xml`, shell scripts that gets executed...) from automatically triggering a build.
 
 When using [Jenkins](https://wiki.eclipse.org/Jenkins) pipelines with GitHub or GitLab hosted repositories, the configuration of the branch source configuration must be done carefully. More specifically, in order to protect against a malicious pull request itself modifying the `Jenkinsfile` to remove the protections, the trust policy for pull requests from forks shall be set to `From users with Admin or Write permission`.
 
-![Jenkins GitHub Pull Request Trust Policy](images/github-trust-pr.png)
+![Jenkins GitHub Pull Request Trust Policy](https://raw.githubusercontent.com/eclipse-cbi/best-practices/refs/heads/main/software-supply-chain/images/github-trust-pr.png)
 
 It will only protect the `Jenkinsfile` file by default. Any other pipeline related file (e.g., `Makefile`, `pom.xml`, shell scripts that gets executed...) that can execute some code should be protected as well. The [`readTrusted`](https://www.jenkins.io/doc/pipeline/steps/workflow-multibranch/#readtrusted-read-trusted-file-from-scm) step must be used to do so.
 
