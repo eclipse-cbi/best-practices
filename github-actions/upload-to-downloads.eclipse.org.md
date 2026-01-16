@@ -1,6 +1,6 @@
 # Upload build artifacts to download.eclipse.org
 
-Eclipse projects are provided with download space on our downloads service, which can be reached via `https://download.eclipse.org/<project_shortname>` e.g. https://download.eclipse.org/cbi.
+Eclipse projects are provided with download space on our downloads service, which can be reached via `https://download.eclipse.org/<project_shortname>` e.g. [https://download.eclipse.org/cbi](https://download.eclipse.org/cbi).
 
 This guide is intended to help with uploading build artifacts to a project's directory on download.eclipse.org using GitHub actions.
 
@@ -13,7 +13,7 @@ This guide is intended to help with uploading build artifacts to a project's dir
 
 Please open a new [HelpDesk issue](https://gitlab.eclipse.org/eclipsefdn/helpdesk/-/issues/new) to request the creation of the SCP credentials.
 
-Otterdog configuration: e.g.: https://github.com/eclipse-cbi/.eclipsefdn/blob/main/otterdog/eclipse-cbi.jsonnet#L267-L277
+Otterdog configuration: e.g.: [https://github.com/eclipse-cbi/.eclipsefdn/blob/main/otterdog/eclipse-cbi.jsonnet#L267-L277](https://github.com/eclipse-cbi/.eclipsefdn/blob/main/otterdog/eclipse-cbi.jsonnet#L267-L277)
 
 ```
       secrets+: [
@@ -76,9 +76,9 @@ jobs:
 ```
 {% endraw %}
 
-Used here: https://github.com/eclipse-cbi/eclipse-cbi-tycho-example/blob/main/.github/workflows/deploy-to-download-server.yml
+Used here: [https://github.com/eclipse-cbi/eclipse-cbi-tycho-example/blob/main/.github/workflows/deploy-to-download-server.yml](https://github.com/eclipse-cbi/eclipse-cbi-tycho-example/blob/main/.github/workflows/deploy-to-download-server.yml)
 
-Build artifacts are uploaded to https://download.eclipse.org/cbi/github-upload-test/.
+Build artifacts are uploaded to [https://download.eclipse.org/cbi/github-upload-test/](https://download.eclipse.org/cbi/github-upload-test/).
 
 ## Best practices
 
@@ -91,4 +91,4 @@ Build artifacts are uploaded to https://download.eclipse.org/cbi/github-upload-t
 
 ## Resources
 
-* https://github.com/appleboy/scp-action
+* [https://github.com/appleboy/scp-action](https://github.com/appleboy/scp-action)
