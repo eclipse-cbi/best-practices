@@ -33,7 +33,8 @@ A distribution management section that defines the repository IDs, names and URL
 
 The repository names must be adapted for each project.
 
-Format: 
+Format:
+
 * `<project_shortname>-maven2-releases`
 * `<project_shortname>-maven2-snapshots`
 
