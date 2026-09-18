@@ -13,7 +13,9 @@ This is the list of secrets needed to deploy to repo.eclipse.org declared in Git
 * `REPO_TOKEN_USERNAME`
 * `REPO_TOKEN_PASSWORD`
 
-Otterdog configuration: e.g: [https://github.com/eclipse-cbi/.eclipsefdn/blob/main/otterdog/eclipse-cbi.jsonnet](https://github.com/eclipse-cbi/.eclipsefdn/blob/main/otterdog/eclipse-cbi.jsonnet)
+Otterdog configuration: 
+
+e.g: [https://github.com/eclipse-cbi/.eclipsefdn/blob/main/otterdog/eclipse-cbi.jsonnet](https://github.com/eclipse-cbi/.eclipsefdn/blob/main/otterdog/eclipse-cbi.jsonnet)
 
 ```js
 secrets+: [
@@ -32,8 +34,8 @@ A distribution management section that defines the repository IDs, names and URL
 The repository names must be adapted for each project.
 
 Format: 
-- `<project_shortname>-maven2-releases`
-- `<project_shortname>-maven2-snapshots`
+* `<project_shortname>-maven2-releases`
+* `<project_shortname>-maven2-snapshots`
 
 E.g. the project short name for project `technology.cbi` is `cbi`.
 
