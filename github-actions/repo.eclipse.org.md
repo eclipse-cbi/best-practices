@@ -13,7 +13,7 @@ This is the list of secrets needed to deploy to repo.eclipse.org declared in Git
 * `REPO_TOKEN_USERNAME`
 * `REPO_TOKEN_PASSWORD`
 
-Otterdog configuration: e.g: https://github.com/eclipse-cbi/.eclipsefdn/blob/main/otterdog/eclipse-cbi.jsonnet
+Otterdog configuration: e.g: [https://github.com/eclipse-cbi/.eclipsefdn/blob/main/otterdog/eclipse-cbi.jsonnet](https://github.com/eclipse-cbi/.eclipsefdn/blob/main/otterdog/eclipse-cbi.jsonnet)
 
 ```js
 secrets+: [
@@ -24,6 +24,34 @@ secrets+: [
       value: "vault:<project_id>/repo.eclipse.org/token-password",
     },
   ],
+```
+## Maven Configuration (`pom.xml`)
+
+A distribution management section that defines the repository IDs, names and URLs for releases and snapshots must be added.
+
+The repository names must be adapted for each project.
+
+Format: 
+- `<project_shortname>-maven2-releases`
+- `<project_shortname>-maven2-snapshots`
+
+E.g. the project short name for project `technology.cbi` is `cbi`.
+
+Example for project `technology.cbi`.
+
+```xml
+<distributionManagement>
+  <repository>
+    <id>repo.eclipse.org</id>
+    <name>Eclipse CBI Nexus Repository - Releases</name>
+    <url>https://repo.eclipse.org/content/repositories/cbi-maven2-releases/</url>
+  </repository>
+  <snapshotRepository>
+    <id>repo.eclipse.org</id>
+    <name>Ecilpse CBI Nexus Repository - Snapshots</name>
+    <url>https://repo.eclipse.org/content/repositories/cbi-maven2-snapshots/</url>
+  </snapshotRepository>
+</distributionManagement>
 ```
 
 ## GitHub Actions Workflow Example
